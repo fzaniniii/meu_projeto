@@ -1,15 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api_servidor.py",
-      "use": "@vercel/python"
-    }
+    { "src": "api_servidor.py", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api_servidor.py"
-    }
+    { "src": "/(.*)", "dest": "api_servidor.py" }
   ]
 }
