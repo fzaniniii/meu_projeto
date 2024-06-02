@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from pytrends.request import TrendReq
 
 app = Flask(__name__)
-pytrends = TrendReq()
+pytrends = TrendReq(hl='en-US', tz=360)
 
 @app.route('/executar_pesquisa', methods=['POST'])
 def executar_pesquisa():
@@ -36,4 +36,4 @@ def executar_pesquisa():
     return jsonify(data), 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
